@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     if (fd)
     {
         printf("LOADING\n");
-        fread(&(ctx->file_array), sizeof(filetype) * 31, 1, fd);
+        fread((ctx->file_array), sizeof(filetype) * 31, 1, fd);
 
         int child_startindex = 1;
         ctx->file_array[0].parent = NULL;

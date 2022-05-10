@@ -12,6 +12,8 @@ file(GLOB_RECURSE ${PROJECT_NAME}_FILES "${${PROJECT_NAME}_SOURCE}/*.c")
 find_package(FUSE REQUIRED)
 include_directories(${FUSE_INCLUDE_DIR})
 
+add_definitions(-D_FILE_OFFSET_BITS=64)
+
 add_executable(fxfs
         ${${PROJECT_NAME}_FILES} src/main.c)
 target_link_libraries(fxfs ${FUSE_LIBRARIES})

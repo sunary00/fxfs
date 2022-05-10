@@ -9,7 +9,11 @@
 // filetype*  root;
 // filetype   file_array[50];
 
-fxfs_context ctx;
+fxfs_context ctx = {
+	.superblock = NULL,
+	.file_array = NULL,
+	.root = NULL
+};
 
 fxfs_context *
 fxfs_get_context()
