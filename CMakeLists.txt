@@ -15,7 +15,7 @@ include_directories(${FUSE_INCLUDE_DIR})
 add_definitions(-D_FILE_OFFSET_BITS=64)
 
 add_executable(fxfs
-        ${${PROJECT_NAME}_FILES} src/main.c)
+               ${${PROJECT_NAME}_FILES} src/main.c)
 target_link_libraries(fxfs ${FUSE_LIBRARIES})
 
 
